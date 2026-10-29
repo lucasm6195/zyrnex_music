@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="app" class="app">
+      <section class="player">
+        <header class="head">
+          <span class="mode-icon"><i id="mode-icon" class="fa-solid fa-music"></i></span>
+          <div class="head-text">
+            <span id="mode-label" class="kicker"></span>
+            <span id="status" class="status"></span>
+          </div>
+          <div id="eq" class="eq"><i></i><i></i><i></i><i></i><i></i></div>
+        </header>
+
+        <div id="cover" class="cover">
+          <div id="cover-blur" class="cover-blur"></div>
+          <img id="cover-img" class="cover-img" alt="" />
+          <i class="fa-solid fa-music cover-empty"></i>
+        </div>
+
+        <div class="meta">
+          <p id="title" class="title"></p>
+          <p id="author" class="author"></p>
+        </div>
+
+        <div id="timeline" class="timeline">
+          <div id="progress" class="progress">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+          <div class="times">
+            <span id="time-now" class="digital">00:00</span>
+            <span id="time-total" class="digital">--:--</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="back" class="ctrl" type="button"><i class="fa-solid fa-rotate-left"></i></button>
+          <button id="toggle" class="ctrl main" type="button"><i class="fa-solid fa-play"></i></button>
+          <button id="forward" class="ctrl" type="button"><i class="fa-solid fa-rotate-right"></i></button>
+          <button id="stop" class="ctrl" type="button"><i class="fa-solid fa-stop"></i></button>
+
+          <div id="volume" class="volume">
+            <svg viewBox="0 0 40 40">
+              <circle class="vol-track" cx="20" cy="20" r="16" />
+              <circle id="vol-fill" class="vol-fill" cx="20" cy="20" r="16" />
+            </svg>
+            <span id="vol-value" class="vol-value digital">50</span>
+            <i id="vol-icon" class="fa-solid fa-volume-high vol-icon"></i>
+          </div>
+        </div>
+
+        <form id="url-form" class="url" autocomplete="off">
+          <i class="fa-brands fa-youtube"></i>
+          <input id="url" type="text" spellcheck="false" />
+          <button class="go" type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+
+        <div id="radius-row" class="radius">
+          <span id="range-label" class="section-label"></span>
+          <input id="radius" class="slider" type="range" min="1" max="300" value="50" />
+          <span class="radius-value"><b id="radius-value" class="digital">50</b> m</span>
+        </div>
+
+        <div id="recent-wrap" class="recent-wrap">
+          <span id="recent-label" class="section-label"></span>
+          <ul id="recent" class="recent"></ul>
+        </div>
+
+        <button id="pick" class="pick" type="button"><i class="fa-solid fa-hand"></i><span id="pick-label"></span></button>
+      </section>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
